@@ -5,6 +5,11 @@
 
 package p61;
 
+import p61.factoryMethod.Contrato;
+import p61.factoryMethod.factory.ContratoFactory;
+import p61.factoryMethod.factory.ContratoFactoryImpl;
+import p61.factoryMethod.factory.TipoContrato;
+
 /**
  *
  * @author morti
@@ -12,6 +17,10 @@ package p61;
 public class PdsUnidad01Ooms {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Factory Method");
+        ContratoFactory factory = new ContratoFactoryImpl();
+        Contrato contrato = factory.crearContratoFactory(TipoContrato.FIJO);
+        System.out.println(contrato.calcularSueldo());
+        
     }
 }

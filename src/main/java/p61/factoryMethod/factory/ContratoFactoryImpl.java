@@ -8,7 +8,6 @@ import p61.factoryMethod.Contrato;
 import p61.factoryMethod.ContratoFacturaImpl;
 import p61.factoryMethod.ContratoFijoImpl;
 import p61.factoryMethod.ContratoTemporalImpl;
-import p61.factoryMethod.factory.TipoContrato;
 
 /**
  *

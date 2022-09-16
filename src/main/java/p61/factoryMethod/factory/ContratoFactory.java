@@ -5,7 +5,6 @@
 package p61.factoryMethod.factory;
 
 import p61.factoryMethod.Contrato;
-import p61.factoryMethod.factory.TipoContrato;
 
 /**
  *

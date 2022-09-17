@@ -9,21 +9,11 @@ package p61.builder;
  * @author Mauricio Ortiz
  */
 public class Renta {
-    
-    private String nombrePropiedad;
+
     private double agua;
     private double luz;
     private double internet;
     private double alicuota;
-
-
-    public String getNombrePropiedad() {
-        return nombrePropiedad;
-    }
-
-    public void setNombrePropiedad(String nombrePropiedad) {
-        this.nombrePropiedad = nombrePropiedad;
-    }
 
     public double getAgua() {
         return agua;
@@ -59,13 +49,10 @@ public class Renta {
 
     @Override
     public String toString() {
-        return "PagoRenta{" + "nombrePropiedad=" + nombrePropiedad 
-                + ", agua=" + agua + ", luz=" + luz + ", internet=" 
-                + internet + ", alicuota=" + alicuota + '}';
+        return "PagoRenta{" + " agua=" + agua
+                + ", luz=" + luz
+                + ", internet=" + internet
+                + ", alicuota=" + alicuota + '}';
     }
 
-
-  
-    
-    
 }

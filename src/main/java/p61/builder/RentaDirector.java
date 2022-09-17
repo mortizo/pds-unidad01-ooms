@@ -6,25 +6,25 @@ package p61.builder;
 
 /**
  *
- * @author morti
+ * @author Mauricio Ortiz
  */
-public class Director {
-    
+public class RentaDirector {
+
     private RentaBuilder builder;
+
+    public void setBuilder(RentaBuilder builder) {
+        this.builder = builder;
+    }
 
     public RentaBuilder getBuilder() {
         return builder;
     }
 
-    public void setBuilder(RentaBuilder builder) {
-        this.builder = builder;
+    public void construirRenta() {
+        this.builder.cobrarAgua();
+        this.builder.cobrarLuz();
+        this.builder.cobrarInternet();
+        this.builder.cobrarAlicuota();
     }
-    
-    public void construir(){
-        builder.setNombrePropiedad("DepartamentoA4B");
-        builder.cobrarAgua(20);
-        builder.cobrarLuz(40);
-        builder.cobrarAlicuota(65);
-    }
-    
+
 }

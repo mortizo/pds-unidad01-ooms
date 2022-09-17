@@ -10,11 +10,19 @@ package p61.builder;
  */
 public abstract class RentaBuilder {
 
-    public abstract void setNombrePropiedad(String nombrePropiedad);
-    public abstract void cobrarAgua(double agua); 
-    public abstract void cobrarLuz(double luz); 
-    public abstract void cobrarInternet(double internet); 
-    public abstract void cobrarAlicuota(double alicuota); 
+    protected Renta renta;
 
-    
+    public Renta getRenta() {
+        return renta;
+    }
+
+
+    public abstract void cobrarAgua();
+
+    public abstract void cobrarLuz();
+
+    public abstract void cobrarInternet();
+
+    public abstract void cobrarAlicuota();
+
 }

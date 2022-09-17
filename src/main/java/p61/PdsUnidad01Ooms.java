@@ -5,6 +5,8 @@
 
 package p61;
 
+import p61.builder.RentaBuilderImpl;
+import p61.builder.Director;
 import p61.factoryMethod.Contrato;
 import p61.factoryMethod.factory.ContratoFactory;
 import p61.factoryMethod.factory.ContratoFactoryImpl;
@@ -21,6 +23,15 @@ public class PdsUnidad01Ooms {
         ContratoFactory factory = new ContratoFactoryImpl();
         Contrato contrato = factory.crearContratoFactory(TipoContrato.FIJO);
         System.out.println(contrato.calcularSueldo());
+        
+        System.out.println("Builder");
+        Director director = new Director();
+        director.setBuilder(new RentaBuilderImpl());
+        director.construir();
+
+        
+        
+        
         
     }
 }

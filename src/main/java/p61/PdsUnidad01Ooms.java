@@ -9,6 +9,7 @@ import p61.builder.RentaDepartamento;
 import p61.builder.RentaDirector;
 import p61.builder.RentaBuilder;
 import p61.builder.RentaCasa;
+import p61.builder02.PersonaBuilder;
 import p61.factoryMethod.Contrato;
 import p61.factoryMethod.factory.ContratoFactory;
 import p61.factoryMethod.factory.ContratoFactoryImpl;
@@ -38,6 +39,17 @@ public class PdsUnidad01Ooms {
         director.setBuilder(renta2);
         director.construirRenta();
         System.out.println(director.getBuilder().getRenta().toString());
+        
+        System.out.println("Builder 2");
+        var persona = new PersonaBuilder();
+        persona
+                .conId(777)
+                .conNombre("Mauricio")
+                .conEdad(41);
+        
+        System.out.println((persona.construir()).toString());
+        
+        
         
   
 

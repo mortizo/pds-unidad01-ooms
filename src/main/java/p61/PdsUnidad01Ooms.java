@@ -14,6 +14,7 @@ import p61.factoryMethod.Contrato;
 import p61.factoryMethod.factory.ContratoFactory;
 import p61.factoryMethod.factory.ContratoFactoryImpl;
 import p61.factoryMethod.factory.TipoContrato;
+import p61.singleton.ContadorVisita;
 
 /**
  *
@@ -22,6 +23,11 @@ import p61.factoryMethod.factory.TipoContrato;
 public class PdsUnidad01Ooms {
 
     public static void main(String[] args) {
+        
+        ContadorVisita.getInstance().setValor(ContadorVisita.getInstance().getValor()+1);
+        
+        System.out.println(ContadorVisita.getInstance().getValor());
+        
         System.out.println("Factory Method");
         var factory = new ContratoFactoryImpl();
         var contrato = factory.crearContratoFactory(TipoContrato.FIJO);
@@ -41,13 +47,27 @@ public class PdsUnidad01Ooms {
         System.out.println(director.getBuilder().getRenta().toString());
         
         System.out.println("Builder 2");
-        var persona = new PersonaBuilder();
-        persona
+        var personaBuilder = new PersonaBuilder();
+        personaBuilder
                 .conId(777)
-                .conNombre("Mauricio")
-                .conEdad(41);
+                .conNombre("Mauricio");
         
-        System.out.println((persona.construir()).toString());
+        
+        var persona = personaBuilder.construir();
+        System.out.println((persona).toString());
+        
+        System.out.println("Singleton");
+        
+        
+        ContadorVisita.getInstance().setValor(ContadorVisita.getInstance().getValor()+1);
+        System.out.println(ContadorVisita.getInstance().getValor());
+
+        
+        
+        
+        
+        
+        
         
         
         

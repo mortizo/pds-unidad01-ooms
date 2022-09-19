@@ -26,5 +26,7 @@ public class RentaDirector {
         this.builder.cobrarInternet();
         this.builder.cobrarAlicuota();
     }
+    
+    
 
 }

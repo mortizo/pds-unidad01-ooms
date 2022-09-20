@@ -4,16 +4,14 @@
  */
 package p61.factoryMethod;
 
+import p61.factoryMethod.Contrato;
+
 /**
  *
  * @author Mauricio Ortiz
  */
-public class ContratoFacturaImpl extends Contrato{
-
-        
-    @Override
-    public double calcularSueldo() {
-        return 1000;
-    }
+public abstract class ContratoFactory {
+    
+    public abstract Contrato crearContratoFactory(TipoContrato tipoContrato);
     
 }

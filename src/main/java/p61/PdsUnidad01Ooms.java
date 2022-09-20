@@ -11,9 +11,9 @@ import p61.builder.RentaBuilder;
 import p61.builder.RentaCasa;
 import p61.builder02.PersonaBuilder;
 import p61.factoryMethod.Contrato;
-import p61.factoryMethod.factory.ContratoFactory;
-import p61.factoryMethod.factory.ContratoFactoryImpl;
-import p61.factoryMethod.factory.TipoContrato;
+import p61.factoryMethod.ContratoFactory;
+import p61.factoryMethod.ContratoFactoryImpl;
+import p61.factoryMethod.TipoContrato;
 import p61.prototype.Jugador;
 import p61.prototype.JugadorEcuador;
 import p61.singleton.ContadorVisita;
@@ -59,6 +59,7 @@ public class PdsUnidad01Ooms {
         System.out.println((persona).toString());
         
         System.out.println("Prototype");
+        
         Jugador enner = new JugadorEcuador("Enner Valencia",9);
         var alexander=enner.clonar();
         alexander.setNombre("Alexander Dominguez");
@@ -73,10 +74,6 @@ public class PdsUnidad01Ooms {
         System.out.println(alexander.toString());
         System.out.println(byron.toString());
         System.out.println(enner1.toString());
-        
-        
-        
-        
         
         System.out.println("Singleton");
 

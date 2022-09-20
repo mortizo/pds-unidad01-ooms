@@ -8,11 +8,11 @@ package p61.factoryMethod;
  *
  * @author Mauricio Ortiz
  */
-public class ContratoFijoImpl extends Contrato{
+public class ContratoTemporal extends Contrato{
 
     @Override
     public double calcularSueldo() {
-        return 2000;
+        return 1500;
     }
     
 }

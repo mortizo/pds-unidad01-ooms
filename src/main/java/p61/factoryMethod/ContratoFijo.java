@@ -2,16 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package p61.factoryMethod.factory;
-
-import p61.factoryMethod.Contrato;
+package p61.factoryMethod;
 
 /**
  *
  * @author Mauricio Ortiz
  */
-public abstract class ContratoFactory {
-    
-    public abstract Contrato crearContratoFactory(TipoContrato tipoContrato);
+public class ContratoFijo extends Contrato{
+
+    @Override
+    public double calcularSueldo() {
+        return 2000;
+    }
     
 }

@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package p61.factoryMethod.factory;
+package p61.factoryMethod;
 
 import p61.factoryMethod.Contrato;
-import p61.factoryMethod.ContratoFacturaImpl;
-import p61.factoryMethod.ContratoFijoImpl;
-import p61.factoryMethod.ContratoTemporalImpl;
+import p61.factoryMethod.ContratoFactura;
+import p61.factoryMethod.ContratoFijo;
+import p61.factoryMethod.ContratoTemporal;
 
 /**
  *
@@ -19,11 +19,11 @@ public class ContratoFactoryImpl extends ContratoFactory{
     public Contrato crearContratoFactory(TipoContrato tipoContrato) {
         switch (tipoContrato) {
             case FIJO:
-                return new ContratoFijoImpl();
+                return new ContratoFijo();
             case TEMPORAL:
-                return new ContratoTemporalImpl();
+                return new ContratoTemporal();
             case FACTURA:
-                return new ContratoFacturaImpl();            
+                return new ContratoFactura();            
             default:
                 throw new IllegalArgumentException("Parámetro inválido");
         }

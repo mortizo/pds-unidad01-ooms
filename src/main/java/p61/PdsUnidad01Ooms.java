@@ -14,6 +14,8 @@ import p61.factoryMethod.Contrato;
 import p61.factoryMethod.factory.ContratoFactory;
 import p61.factoryMethod.factory.ContratoFactoryImpl;
 import p61.factoryMethod.factory.TipoContrato;
+import p61.prototype.Jugador;
+import p61.prototype.JugadorEcuador;
 import p61.singleton.ContadorVisita;
 
 /**
@@ -56,12 +58,32 @@ public class PdsUnidad01Ooms {
         var persona = personaBuilder.construir();
         System.out.println((persona).toString());
         
+        System.out.println("Prototype");
+        Jugador enner = new JugadorEcuador("Enner Valencia",9);
+        var alexander=enner.clonar();
+        alexander.setNombre("Alexander Dominguez");
+        alexander.setNumero(1);
+        var byron=enner.clonar();
+        byron.setNombre("Byron Castillo");
+        byron.setNumero(6);
+        var enner1=enner.clonar();
+                
+        
+        System.out.println(enner.toString());
+        System.out.println(alexander.toString());
+        System.out.println(byron.toString());
+        System.out.println(enner1.toString());
+        
+        
+        
+        
+        
         System.out.println("Singleton");
-        
-        
+
         ContadorVisita.getInstance().setValor(ContadorVisita.getInstance().getValor()+1);
         System.out.println(ContadorVisita.getInstance().getValor());
 
+        
         
         
         

@@ -5,13 +5,28 @@
 package p61.factoryMethod;
 
 import p61.factoryMethod.Contrato;
+import p61.factoryMethod.ContratoFactura;
+import p61.factoryMethod.ContratoFijo;
+import p61.factoryMethod.ContratoTemporal;
 
 /**
  *
  * @author Mauricio Ortiz
  */
-public abstract class ContratoFactory {
-    
-    public abstract Contrato crearContratoFactory(TipoContrato tipoContrato);
+public class ContratoFactory extends ContratoAbstractFactory{
+
+    @Override
+    public Contrato crearContratoFactory(TipoContrato tipoContrato) {
+        switch (tipoContrato) {
+            case FIJO:
+                return new ContratoFijo();
+            case TEMPORAL:
+                return new ContratoTemporal();
+            case FACTURA:
+                return new ContratoFactura();            
+            default:
+                throw new IllegalArgumentException("Parámetro inválido");
+        }
+    }
     
 }

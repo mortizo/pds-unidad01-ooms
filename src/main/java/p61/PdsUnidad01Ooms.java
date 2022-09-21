@@ -5,14 +5,20 @@
 
 package p61;
 
+import p61.abstractFactory.FijoFactory;
+import p61.abstractFactory.TemporalFactory;
+import p61.abstractFactory02.AutoFactory;
+import p61.abstractFactory02.Camioneta;
+import p61.abstractFactory02.CamionetaFactory;
+import p61.abstractFactory02.VehiculoFactory;
 import p61.builder.RentaDepartamento;
 import p61.builder.RentaDirector;
 import p61.builder.RentaBuilder;
 import p61.builder.RentaCasa;
 import p61.builder02.PersonaBuilder;
 import p61.factoryMethod.Contrato;
+import p61.factoryMethod.ContratoAbstractFactory;
 import p61.factoryMethod.ContratoFactory;
-import p61.factoryMethod.ContratoFactoryImpl;
 import p61.factoryMethod.TipoContrato;
 import p61.prototype.Jugador;
 import p61.prototype.JugadorEcuador;
@@ -31,7 +37,7 @@ public class PdsUnidad01Ooms {
         System.out.println(ContadorVisita.getInstance().getValor());
         
         System.out.println("Factory Method");
-        var factory = new ContratoFactoryImpl();
+        var factory = new ContratoFactory();
         var contrato = factory.crearContratoFactory(TipoContrato.FIJO);
         System.out.println(contrato.calcularSueldo());
         
@@ -80,6 +86,20 @@ public class PdsUnidad01Ooms {
         ContadorVisita.getInstance().setValor(ContadorVisita.getInstance().getValor()+1);
         System.out.println(ContadorVisita.getInstance().getValor());
 
+        
+        System.out.println("Abstract Factory");
+        
+        var vehiculo = VehiculoFactory.getVehiculo(new AutoFactory("FBASD21421","1232156332277","ABF0229"));
+        System.out.println("AbstractFactory Vehiculo "+vehiculo.info());
+	var camioneta = VehiculoFactory.getVehiculo(new CamionetaFactory("CHJSD845213","9862158833116","ADX0422"));
+	System.out.println("AbstractFactory Camioneta "+camioneta.info());
+        
+        var obj1 = new FijoFactory().crearMedico().calcularSueldo();
+        var obj2  = new TemporalFactory().crearMedico().calcularSueldo();
+        var obj3 = new FijoFactory().crearColaborador().calcularSueldo();
+        var obj4  = new TemporalFactory().crearColaborador().calcularSueldo();
+        
+        System.out.println(obj1+" "+obj2+" "+obj3+" "+obj4);
         
         
         

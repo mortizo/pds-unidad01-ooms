@@ -6,8 +6,10 @@ package p61.abstractFactory;
 
 /**
  *
- * @author Mauricio Ortiz Ochoa
+ * @author Mauricio Ortiz
  */
-public interface VehiculoAbstractFactory {
-    public Vehiculo createVehiculo();
+public interface Colaborador {
+    
+    public abstract double calcularSueldo();
+    
 }

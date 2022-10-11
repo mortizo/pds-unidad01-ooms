@@ -6,7 +6,7 @@ package p61.singleton;
 
 /**
  *
- * @author morti
+ * @author Mauricio Ortiz
  */
 public class ContadorVisita {
     

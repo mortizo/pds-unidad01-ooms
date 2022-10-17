@@ -15,6 +15,9 @@ public class Renta {
     private double internet;
     private double alicuota;
 
+    
+    
+
     public double getAgua() {
         return agua;
     }

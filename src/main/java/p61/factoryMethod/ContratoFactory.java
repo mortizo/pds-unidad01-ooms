@@ -24,9 +24,12 @@ public class ContratoFactory extends ContratoAbstractFactory{
                 return new ContratoTemporal();
             case FACTURA:
                 return new ContratoFactura();            
+            case ENLINEA:
+                return new ContratoEnLinea();            
+                
             default:
                 throw new IllegalArgumentException("Parámetro inválido");
         }
     }
-    
+
 }

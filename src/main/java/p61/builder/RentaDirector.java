@@ -27,6 +27,13 @@ public class RentaDirector {
         this.builder.cobrarAlicuota();
     }
     
+    public void construirRentaCasa() {
+        this.builder.cobrarAgua();
+        this.builder.cobrarLuz();
+    }
+    
+    
+    
     
 
 }

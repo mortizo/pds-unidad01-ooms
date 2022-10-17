@@ -10,6 +10,23 @@ package p61.factoryMethod;
  */
 public abstract class Contrato {
     
+    private int maxHoras;
+    
     public abstract double calcularSueldo();
+    
+    public String mostrarContrato(){
+        var retorno=this.maxHoras+" ";
+        return retorno;
+    }
+
+    public int getMaxHoras() {
+        return maxHoras;
+    }
+
+    public void setMaxHoras(int maxHoras) {
+        this.maxHoras = maxHoras;
+    }
+    
+    
     
 }

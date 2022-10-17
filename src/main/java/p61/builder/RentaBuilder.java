@@ -16,7 +16,6 @@ public abstract class RentaBuilder {
         return renta;
     }
 
-
     public abstract void cobrarAgua();
 
     public abstract void cobrarLuz();

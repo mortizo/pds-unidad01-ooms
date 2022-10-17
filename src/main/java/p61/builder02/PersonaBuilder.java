@@ -6,13 +6,13 @@ package p61.builder02;
 
 /**
  *
- * @author UPS
+ * @author Mauricio Ortiz Ochoa
  */
 public class PersonaBuilder {
     
     private Persona persona;
 
-    public PersonaBuilder() {
+    public PersonaBuilder( ) {
         this.persona= new Persona();
     }
     

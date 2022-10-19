@@ -26,7 +26,7 @@ import p61.singleton.ContadorVisita;
 
 /**
  *
- * @author morti
+ * @author Mauricio Ortiz Ochoa
  */
 public class PdsUnidad01Ooms {
 
@@ -34,7 +34,8 @@ public class PdsUnidad01Ooms {
         //poo();
         //factory();
         //builder();
-        abstractFctory();
+        //abstractFctory();
+        prototype();
 
     }
 
@@ -78,15 +79,10 @@ public class PdsUnidad01Ooms {
 
     public static void abstractFctory() {
         System.out.println("Abstract Factory");
-/*
-        var vehiculo = VehiculoFactory.getVehiculo(new AutoFactory("FBASD21421", "1232156332277", "ABF0229"));
-        System.out.println("AbstractFactory Vehiculo " + vehiculo.info());
-        var camioneta = VehiculoFactory.getVehiculo(new CamionetaFactory("CHJSD845213", "9862158833116", "ADX0422"));
-        System.out.println("AbstractFactory Camioneta " + camioneta.info());
-*/
-        var fijoFactory =new FijoFactory();
+
+        var fijoFactory = new FijoFactory();
         var obj1 = fijoFactory.crearMedico().calcularSueldo();
-        
+
         var obj2 = new TemporalFactory().crearMedico().calcularSueldo();
         var obj3 = new FijoFactory().crearColaborador().calcularSueldo();
         var obj4 = new TemporalFactory().crearColaborador().calcularSueldo();
@@ -94,29 +90,33 @@ public class PdsUnidad01Ooms {
         System.out.println(obj1 + " " + obj2 + " " + obj3 + " " + obj4);
     }
 
-    public static void todos() {
-
-        ContadorVisita.getInstance().setValor(ContadorVisita.getInstance().getValor() + 1);
-
-        System.out.println(ContadorVisita.getInstance().getValor());
-
+    public static void prototype() {
         System.out.println("Prototype");
 
         Jugador enner = new JugadorEcuador("Enner Valencia", 9);
         var alexander = enner.clonar();
+        var byron = enner.clonar();
+        var enner1 = enner.clonar();
+        
         alexander.setNombre("Alexander Dominguez");
         alexander.setNumero(1);
-        var byron = enner.clonar();
         byron.setNombre("Byron Castillo");
         byron.setNumero(6);
-        var enner1 = enner.clonar();
 
         System.out.println(enner.toString());
         System.out.println(alexander.toString());
         System.out.println(byron.toString());
         System.out.println(enner1.toString());
 
+    }
+
+    public static void singleton() {
+
         System.out.println("Singleton");
+
+        ContadorVisita.getInstance().setValor(ContadorVisita.getInstance().getValor() + 1);
+
+        System.out.println(ContadorVisita.getInstance().getValor());
 
         ContadorVisita.getInstance().setValor(ContadorVisita.getInstance().getValor() + 1);
         System.out.println(ContadorVisita.getInstance().getValor());

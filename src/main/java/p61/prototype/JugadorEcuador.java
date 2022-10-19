@@ -6,7 +6,7 @@ package p61.prototype;
 
 /**
  *
- * @author UPS
+ * @author Mauricio Ortiz Ochoa
  */
 public class JugadorEcuador extends Jugador {
 

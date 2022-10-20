@@ -35,8 +35,8 @@ public class PdsUnidad01Ooms {
         //factory();
         //builder();
         //abstractFctory();
-        prototype();
-
+        //prototype();
+        singleton();
     }
 
     public static void poo() {
@@ -97,7 +97,7 @@ public class PdsUnidad01Ooms {
         var alexander = enner.clonar();
         var byron = enner.clonar();
         var enner1 = enner.clonar();
-        
+
         alexander.setNombre("Alexander Dominguez");
         alexander.setNumero(1);
         byron.setNombre("Byron Castillo");
@@ -113,13 +113,24 @@ public class PdsUnidad01Ooms {
     public static void singleton() {
 
         System.out.println("Singleton");
-
-        ContadorVisita.getInstance().setValor(ContadorVisita.getInstance().getValor() + 1);
-
-        System.out.println(ContadorVisita.getInstance().getValor());
-
-        ContadorVisita.getInstance().setValor(ContadorVisita.getInstance().getValor() + 1);
-        System.out.println(ContadorVisita.getInstance().getValor());
+        var contador1 = new ContadorVisita();
+        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
+        System.out.println(contador1.getInstance().getValor());
+        contador1 = new ContadorVisita();
+        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
+        contador1 = new ContadorVisita();
+        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
+        contador1 = new ContadorVisita();
+        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
+        contador1 = new ContadorVisita();
+        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
+        contador1 = new ContadorVisita();
+        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
+        contador1 = new ContadorVisita();
+        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
+        contador1 = new ContadorVisita();
+        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
+        System.out.println(contador1.getInstance().getValor());
 
     }
 

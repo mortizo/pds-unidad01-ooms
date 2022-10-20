@@ -13,7 +13,7 @@ public class ContadorVisita {
     private static ContadorVisita instance;
     private int valor;
     
-    public static ContadorVisita getInstance() {
+    public ContadorVisita getInstance() {
         if(instance == null){
             instance = new ContadorVisita();
         }

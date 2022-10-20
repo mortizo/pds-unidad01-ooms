@@ -22,7 +22,9 @@ import p61.factoryMethod.TipoContrato;
 import p61.poo.Auto1;
 import p61.prototype.Jugador;
 import p61.prototype.JugadorEcuador;
+import p61.singleton.AppMovil;
 import p61.singleton.ContadorVisita;
+import p61.singleton.PortalWeb;
 
 /**
  *
@@ -113,24 +115,15 @@ public class PdsUnidad01Ooms {
     public static void singleton() {
 
         System.out.println("Singleton");
-        var contador1 = new ContadorVisita();
-        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
-        System.out.println(contador1.getInstance().getValor());
-        contador1 = new ContadorVisita();
-        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
-        contador1 = new ContadorVisita();
-        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
-        contador1 = new ContadorVisita();
-        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
-        contador1 = new ContadorVisita();
-        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
-        contador1 = new ContadorVisita();
-        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
-        contador1 = new ContadorVisita();
-        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
-        contador1 = new ContadorVisita();
-        contador1.getInstance().setValor(contador1.getInstance().getValor() + 1);
-        System.out.println(contador1.getInstance().getValor());
+        
+        var portalWeb = new PortalWeb();
+        var appMovil = new AppMovil();
+                       
+        System.out.println(portalWeb.realizarVisita(10));
+        System.out.println(appMovil.realizarVisita(20));
+        System.out.println(portalWeb.realizarVisita(70));
+        
+        
 
     }
 

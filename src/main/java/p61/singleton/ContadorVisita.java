@@ -12,8 +12,11 @@ public class ContadorVisita {
     
     private static ContadorVisita instance;
     private int valor;
+
+    private ContadorVisita() {
+    }
     
-    public ContadorVisita getInstance() {
+    public static ContadorVisita getInstance() {
         if(instance == null){
             instance = new ContadorVisita();
         }

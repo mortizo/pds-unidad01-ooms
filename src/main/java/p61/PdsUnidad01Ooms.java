@@ -24,6 +24,7 @@ import p61.prototype.Jugador;
 import p61.prototype.JugadorEcuador;
 import p61.singleton.AppMovil;
 import p61.singleton.ContadorVisita;
+import p61.singleton.EstudianteU;
 import p61.singleton.PortalWeb;
 
 /**
@@ -72,8 +73,7 @@ public class PdsUnidad01Ooms {
         System.out.println("Builder 2");
         var personaBuilder = new PersonaBuilder();
         personaBuilder
-                .conId(777)
-                .conNombre("Mauricio");
+                .conId(777);
 
         var persona = personaBuilder.construir();
         System.out.println((persona).toString());
@@ -115,6 +115,20 @@ public class PdsUnidad01Ooms {
     public static void singleton() {
 
         System.out.println("Singleton");
+    
+        var estudiante1 = new EstudianteU();
+        var estudiante2 = new EstudianteU();
+        var estudiante3 = new EstudianteU();
+        var estudiante4 = new EstudianteU();
+        
+        estudiante1.setNombre("Mauricio");
+        estudiante2.setNombre("Juana");
+        estudiante3.setNombre("Maria");
+        estudiante4.setNombre("Ana");
+        
+        var dec=Math.ceil(9.3);
+        System.out.println("dec = " + dec);
+        
         
         var portalWeb = new PortalWeb();
         var appMovil = new AppMovil();
@@ -122,6 +136,8 @@ public class PdsUnidad01Ooms {
         System.out.println(portalWeb.realizarVisita(10));
         System.out.println(appMovil.realizarVisita(20));
         System.out.println(portalWeb.realizarVisita(70));
+        System.out.println(appMovil.realizarVisita(100));
+        
         
         
 

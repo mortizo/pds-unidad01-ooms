@@ -12,8 +12,10 @@ public class ContadorVisita {
     
     private static ContadorVisita instance;
     private int valor;
+    
 
     private ContadorVisita() {
+        
     }
     
     public static ContadorVisita getInstance() {

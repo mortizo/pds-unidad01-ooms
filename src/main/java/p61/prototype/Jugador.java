@@ -50,6 +50,8 @@ public abstract class Jugador {
         this.colorCamiseta = colorCamiseta;
     }
 
+    
+
     @Override
     public String toString() {
         return "Jugador{" + "nombre=" + nombre 

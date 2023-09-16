@@ -13,12 +13,23 @@ public class PrincipalPOO {
     
     public static void main(String[] args) {
       
-        var casa = new Casa(15);
+        var propietario = new Propietario();
+        propietario.setCedula("0103");
+        propietario.setNombre("Juan");
+        
+        
+        var casa = new Casa(4);
         casa.setCodigo(1);
         casa.setMetrosTerreno(140);
-        casa.setNumeroHabitaciones(4);
+        casa.nuevaHabitacion(9);
+        casa.nuevaHabitacion(11);
+        casa.nuevaHabitacion(8);
+        casa.agregaPropietario(propietario);
         
-        System.out.println(casa.verInfo());
+
+        System.out.println(casa.verInfo()+" numero de habitaciones: "+
+                casa.getHabitacionList().size()+
+                " numero propietarios: "+casa.getPropietarioList().size());
         
     }
     

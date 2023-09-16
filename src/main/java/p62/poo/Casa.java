@@ -15,22 +15,30 @@ public class Casa extends Edificacion implements IDatos{
     
     private int numeroHabitaciones;
     private List<Habitacion> habitacionList;
-
+    private List<Propietario> propietarioList;
+    
+    
     public Casa(int numeroHabitaciones) {
         this.numeroHabitaciones = numeroHabitaciones;
         this.habitacionList= new ArrayList();
     }
 
-    
-    
-    private boolean nuevaHabitacion(int metrosCloset){
+    public boolean nuevaHabitacion(int metrosCloset){
         boolean retorno=false;
         var habitacion= new Habitacion();
         habitacion.setMetrosCloset(metrosCloset);
         this.habitacionList.add(habitacion);
+        retorno=true;
         return retorno;
         
     }
+    
+    public boolean agregaPropietario(Propietario propietario){
+        boolean retorno=false;
+        this.propietarioList.add(propietario);
+        return retorno;
+    }
+    
     
     public int getNumeroHabitaciones() {
         return numeroHabitaciones;
@@ -39,6 +47,24 @@ public class Casa extends Edificacion implements IDatos{
     public void setNumeroHabitaciones(int numeroHabitaciones) {
         this.numeroHabitaciones = numeroHabitaciones;
     }
+
+    public List<Habitacion> getHabitacionList() {
+        return habitacionList;
+    }
+
+    public void setHabitacionList(List<Habitacion> habitacionList) {
+        this.habitacionList = habitacionList;
+    }
+
+    public List<Propietario> getPropietarioList() {
+        return propietarioList;
+    }
+
+    public void setPropietarioList(List<Propietario> propietarioList) {
+        this.propietarioList = propietarioList;
+    }
+    
+    
 
     @Override
     public String verInfo() {

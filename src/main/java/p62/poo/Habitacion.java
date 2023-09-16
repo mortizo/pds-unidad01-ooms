@@ -8,12 +8,19 @@ package p62.poo;
  *
  * @author morti
  */
-public class Propietario {
+public class Habitacion {
     
-    private String cedula;
-    private String nombre;
-    private Transporte unTransporte;
-    
+    private int metrosCloset;
 
+    public int getMetrosCloset() {
+        return metrosCloset;
+    }
+
+    public void setMetrosCloset(int metrosCloset) {
+        this.metrosCloset = metrosCloset;
+    }
+    
+    
+    
     
 }

@@ -13,10 +13,10 @@ public class PrincipalPOO {
     
     public static void main(String[] args) {
       
-        var propietario = new Propietario();
-        propietario.setCedula("0103");
-        propietario.setNombre("Juan");
+        var propietario1 = new Propietario("0103");
         
+        propietario1.setNombre("Juan");
+        var propietario2 = new Propietario("0103","Juan");
         
         var casa = new Casa(4);
         casa.setCodigo(1);
@@ -24,7 +24,7 @@ public class PrincipalPOO {
         casa.nuevaHabitacion(9);
         casa.nuevaHabitacion(11);
         casa.nuevaHabitacion(8);
-        casa.agregaPropietario(propietario);
+        casa.agregaPropietario(propietario1);
         
 
         System.out.println(casa.verInfo()+" numero de habitaciones: "+

@@ -13,6 +13,15 @@ public abstract class Vehiculo {
     private String marca;
     private String modelo;
     private int year;
+    private Propietario propietario;
+
+    public Propietario getPropietario() {
+        return propietario;
+    }
+
+    public void setPropietario(Propietario propietario) {
+        this.propietario = propietario;
+    }
     
     public abstract int calcularEdad(int yearActual);
     

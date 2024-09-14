@@ -8,18 +8,18 @@ package p65.poo;
  *
  * @author morti
  */
-public class Vehiculo {
+public abstract class Vehiculo {
     
     private String marca;
     private String modelo;
     private int year;
     
-    public int calcularEdad(int yearActual){
-        return yearActual-this.year;
-    }
+    public abstract int calcularEdad(int yearActual);
+    
     
     public String obtenerInformacion(){
-        return this.toString();
+        return "Vehiculo{" + "marca=" + this.marca + ", modelo=" + this.modelo +
+                ", year=" + this.year + '}';
     }
 
     public String getMarca() {
@@ -47,5 +47,8 @@ public class Vehiculo {
     public void setYear(int year) {
         this.year = year;
     }
+
+  
+    
     
 }

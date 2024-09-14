@@ -4,33 +4,37 @@
  */
 package p65.poo;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
 /**
  *
  * @author morti
  */
 public class Coche extends Vehiculo{
+
+    
     
     private int numeroPuertas;
     private int capacidadTanque;
     private int tipoCombustible;
-   // private Vehiculo vehiculo;
+    private List llantaList;
 
-   /* public Coche(int numeroPuertas, int capacidadTanque, int tipoCombustible, Vehiculo vehiculo) {
-        this.numeroPuertas = numeroPuertas;
-        this.capacidadTanque = capacidadTanque;
-        this.tipoCombustible = tipoCombustible;
-        this.vehiculo = vehiculo;
-    }*/
-
-    public Coche(int numeroPuertas, int capacidadTanque, int tipoCombustible) {
-        this.numeroPuertas = numeroPuertas;
-        this.capacidadTanque = capacidadTanque;
-        this.tipoCombustible = tipoCombustible;
+    public Coche() {
+        this.llantaList= new ArrayList();
     }
     
+    public void addLlanta(String m, int l){
+        this.llantaList.add(new Llanta(m,l));
+    }
+
     
     
     
+    public int calcularEdad(int yearActual) {
+        return yearActual-this.getYear();
+    }
 
     public int getNumeroPuertas() {
         return numeroPuertas;
@@ -56,6 +60,11 @@ public class Coche extends Vehiculo{
         this.tipoCombustible = tipoCombustible;
     }
 
+    public String obtenerInformacion(){
+        return super.obtenerInformacion()+
+                this.capacidadTanque+" "+this.numeroPuertas+" "+
+                this.tipoCombustible;
+    }
     
     
     

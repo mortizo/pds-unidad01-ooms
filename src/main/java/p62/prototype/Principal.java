@@ -17,6 +17,7 @@ public class Principal {
         Perro tristan;
         
         blue = new Perro();
+       // luna =(Perro)blue.clonar();
         luna =(Perro)blue.clonar();
         luna.setDuenio("Juana Moreno");
         luna.setEdad(6);

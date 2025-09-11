@@ -11,7 +11,7 @@ package p67.poo;
 public class Main {
     public static void main(String[] args) {
         
-        System.out.print(args);
+        System.out.print("Test 01");
         
     }
 }

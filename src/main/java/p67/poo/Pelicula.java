@@ -10,9 +10,9 @@ package p67.poo;
  */
 public class Pelicula {
     
-    String nombre;
-    int duracion;
-    String fecha;
+    private String nombre;
+    private int duracion;
+    private String fecha;
     //Genero genero;
     
     boolean esCorto(){
@@ -25,6 +25,30 @@ public class Pelicula {
     int obtenerLimiteEdad(){
         var retorno=18;
         return retorno;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(int duracion) {
+        this.duracion = duracion;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
     
     

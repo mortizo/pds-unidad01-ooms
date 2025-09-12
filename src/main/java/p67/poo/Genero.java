@@ -4,7 +4,8 @@
  */
 package p67.poo;
 
-import java.util.List;
+import java.awt.Color;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,9 +15,10 @@ public class Genero {
     
     String nombre;
     int limiteEdad;
-    List<Pelicula> peliculaList;
+//    ArrayList<Pelicula> peliculaList;
+    Pelicula [] peliculaList;
     
-    String obtenerMensaje(){
+    String obtenerMensaje(Color c){
         var retorno="Película con desnudos, violencia y guerra";
         
         return retorno;

@@ -11,9 +11,8 @@ package p67.poo;
 public class Main {
     public static void main(String[] args) {
         
-        var pelicula=Pelicula();
-        
-        System.out.print("Test 01");
+        var pelicula= new Pelicula();       
+        System.out.print(pelicula.esCorto());
         
         
     }

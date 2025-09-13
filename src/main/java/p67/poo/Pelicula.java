@@ -4,28 +4,43 @@
  */
 package p67.poo;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 /**
  *
  * @author morti
  */
-public class Pelicula {
+public abstract class Pelicula {
     
     private String nombre;
     private int duracion;
-    private String fecha;
-    //Genero genero;
+    private List<Premio> premioList;
+    private List<Actor> actorList;
     
-    boolean esCorto(){
-        var retorno=false;
-        if(this.duracion<=15)
-            return true;
-        return retorno;
-    }
     
-    int obtenerLimiteEdad(){
-        var retorno=18;
-        return retorno;
+       
+    public abstract int obtenerLimiteEdad();
+
+    public List<Premio> getPremioList() {
+        return premioList;
     }
+
+    public void setPremioList(List<Premio> premioList) {
+        this.premioList = premioList;
+    }
+
+    public List<Actor> getActorList() {
+        return actorList;
+    }
+
+    public void setActorList(List<Actor> actorList) {
+        this.actorList = actorList;
+    }
+   
+    
+    
 
     public String getNombre() {
         return nombre;
@@ -43,14 +58,5 @@ public class Pelicula {
         this.duracion = duracion;
     }
 
-    public String getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
-    
-    
     
 }

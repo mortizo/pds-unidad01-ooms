@@ -35,7 +35,8 @@ public class Main {
         losIncas.setActorList(new ArrayList());
         losIncas.getActorList().add(leo);
         
-        
+        for(Actor a:pinocho.getActorList())
+            System.out.println(a.getNombre()+" "+a.getEdad());
         
         System.out.println(laBombaAtomica.obtenerLimiteEdad());
         System.out.println(pinocho.obtenerLimiteEdad());

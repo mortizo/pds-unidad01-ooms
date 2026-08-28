@@ -18,6 +18,7 @@ public final class Main {
                 mostrarMenu();
                 String opcion = scanner.nextLine().trim();
 
+                // El cliente elige un creador concreto, no instancia productos directamente.
                 switch (opcion) {
                     case "1":
                         procesarContratoFijo(scanner);
@@ -75,6 +76,7 @@ public final class Main {
     }
 
     private static void mostrarResultado(CreadorContrato creador) {
+        // El cliente trabaja con las abstracciones CreadorContrato y Contrato.
         Contrato contrato = creador.crearContrato();
         System.out.printf("Producto creado: %s%n", contrato.getClass().getSimpleName());
         System.out.printf("Sueldo calculado: $%.2f%n", contrato.calcularSueldo());
